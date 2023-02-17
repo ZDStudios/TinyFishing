@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.4.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { font-family: "Liberation Mono", monospace; font-size: 10pt; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+        &lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;/&gt;
+        &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt;
+        &lt;meta name =&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot; /&gt;
+        &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt;
+        &lt;meta charset=&quot;utf-8&quot;/&gt;
+
+        &lt;!-- Set the title bar of the page --&gt;
+        &lt;title&gt;Tiny Fishing&lt;/title&gt;
+
+        &lt;!-- Set the background colour of the document --&gt;
+        &lt;style&gt;
+            body {
+              background: &quot;#0&quot;;
+              color:#cccccc;
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            canvas {
+                      image-rendering: optimizeSpeed;
+                      -webkit-interpolation-mode: nearest-neighbor;
+                      -ms-touch-action: none;
+                      margin: 0px;
+                      padding: 0px;
+                      border: 0px;
+            }
+            :-webkit-full-screen #canvas {
+                 width: 100%;
+                 height: 100%;
+            }
+            invisible_button
+            {
+              background-color:   rgba(1, 1, 1, 1);
+              background-repeat:  no-repeat;
+              border:             none;
+              cursor:             disabled;
+              overflow:           hidden;
+              outline:            none;
+              bottom:             0;
+              left:               0;
+              position:           absolute;
+              width:              100px;
+              height:             100px;
+              top:                0px;
+              left:               0px;
+              pointer-events:     none;
+              filter:             alpha(opacity=0);
+              -mos-opacity:       0.0;
+              opacity:            0.0;
+              display:            block;
+              z-index:            2;   
+              -moz-user-select:   -moz-none;
+              -khtml-user-select: none;
+              -webkit-user-select:none;
+               /*
+                 Introduced in IE 10.
+                 See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+               */
+              -ms-user-select:    none;
+              user-select:        none;
+            }
+            div.gm4html5_div_class
+            {
+              margin: 0px;
+              padding: 0px;
+              border: 0px;
+            }
+            /* START - Login Dialog Box */
+            div.gm4html5_login
+            {
+                 padding: 20px;
+                 position: absolute;
+                 border: solid 2px #000000;
+                 background-color: #404040;
+                 color:#00ff00;
+                 border-radius: 15px;
+                 box-shadow: #101010 20px 20px 40px;
+            }
+            div.gm4html5_cancel_button
+            {
+                 float: right;
+            }
+            div.gm4html5_login_button
+            {
+                 float: left;
+            }
+            div.gm4html5_login_header
+            {
+                 text-align: center;
+            }
+            /* END - Login Dialog Box */
+            :-webkit-full-screen {
+               width: 100%;
+               height: 100%;
+            }
+
+            #sbar1 {
+              border-radius: 25px;
+              background: #73AD21;
+              padding: 20px;
+              width: 200px;
+              height: 150px;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+            &lt;img  src=&quot;html5game/bg.png&quot; id=&quot;img_loadingbg&quot; alt=&quot;&quot; style=&quot;position:absolute; left : 0; top : 0; width:1px; height:1px;&quot;/&gt;
+            &lt;img  src=&quot;html5game/caption.png&quot; id=&quot;img_loadingicon&quot; alt=&quot;&quot; style=&quot;position:absolute; left : 0; top : 0; width:1px; height:1px;&quot;/&gt;
+            &lt;img  src=&quot;html5game/bh5logo.png&quot; id=&quot;img_loadinglogoicon&quot; alt=&quot;&quot; style=&quot;position:absolute; left : 0; top : 0; width:1px; height:1px;&quot;/&gt;
+
+            &lt;div  id=&quot;img_loadingbar&quot; style=&quot;border-radius: 25px; width:1px;height:1px; position:absolute; left : 0px; top : 0; background-color:#d7e0ee&quot;&gt;&lt;/div&gt;
+            &lt;div  id=&quot;img_loadingbaroverlay&quot; style=&quot;border-radius: 25px; width:1px;height:1px; position:absolute; left : 0px; top : 0; background-color:#f8703a&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;gm4html5_div_class&quot; id=&quot;gm4html5_div_id&quot;&gt;
+            &lt;canvas id=&quot;canvas&quot; width=&quot;1&quot; height=&quot;1&quot; &gt;
+                     &lt;p&gt;Your browser doesn't support HTML5 canvas.&lt;/p&gt;
+            &lt;/canvas&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Run the game code --&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;html5game/TinyFishing.js&quot;&gt;&lt;/script&gt;
+        &lt;script&gt;window.onload = GameMaker_Init;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
